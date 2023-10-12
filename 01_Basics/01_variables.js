@@ -1,6 +1,6 @@
 const accId = 84
 let accEmail = "abc@gmail.com"
-let accName; 
+let accName;
 var accPass = "2222";
 accCity = "Paratwada"
 
@@ -10,7 +10,7 @@ accPass;
 accCity = "Amravati"
 
 // console.log(accId); // Old Method
-console.table([accId,accEmail,accPass, accCity, accName]);
+console.table([accId, accEmail, accPass, accCity, accName]);
 
 // refer the written notes
 
