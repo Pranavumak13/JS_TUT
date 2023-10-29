@@ -21,4 +21,4 @@
 // Solutions use === and !== , it checks for numbers and datatypes
 
 console.log(null === 0);
-console.log(2 === "2");
+console.log(2 === "2"); 
