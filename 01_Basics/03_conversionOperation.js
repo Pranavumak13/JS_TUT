@@ -1,11 +1,11 @@
 let score = "33abc";
 
-// console.log(typeof score);
+// console.log(typeof score); // string
 // console.log(typeof (score));
 
 let valueInNum = Number(score);
-// console.log(valueInNum);
-// console.log(typeof valueInNum);
+// console.log(valueInNum);// NaN
+// console.log(typeof valueInNum); // number
 
 
 // true => 1; false => 0
@@ -41,8 +41,8 @@ console.log(isBooleanValue);
 
 // // But the tricky part is this: 
 
-// console.log("2" + 3);
-// console.log(typeof ("2" + 3));
+// console.log("2" + 3); // 23
+// console.log(typeof ("2" + 3)); // string
 
 // console.log(2 + "3");
 // console.log(typeof (2 + "3"));

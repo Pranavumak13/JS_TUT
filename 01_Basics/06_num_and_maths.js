@@ -14,7 +14,7 @@ const numNums = 23.93566
 
 
 const bigNum = 10000
-// console.log(bigNum.toLocaleString());
+console.log(bigNum.toLocaleString());
 
 
 // --------------- Maths ------------------------------
