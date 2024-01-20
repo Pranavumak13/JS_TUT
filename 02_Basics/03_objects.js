@@ -7,7 +7,7 @@
 //2. Object Literals --> using curly braces
 const JSuser = {
     name: "Pranav",
-    "full name": "Pranav Umak",
+    "full name": "Pranav Umak",// --> interesting
     age: 18,
     location: "Jaipur",
     isLoggedin: false,
@@ -38,7 +38,7 @@ const symObj = {
 }
 
 // console.log(symObj.mySymbol); --> wrong
-// console.log(symObj[mySymbol]); --> correct
+// console.log(symObj[mySymbol]); --> correct (No dot operator is used here)
 
 
 // -------- Freeze the object

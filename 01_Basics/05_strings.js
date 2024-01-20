@@ -11,7 +11,7 @@ console.log(`${name} has ${Marks} marks in the exam`);
 const Name = "Pranav"; // one way
 const newName = new String("Pranav Umak") // another way
 
-console.log(typeof newName);
+console.log(typeof newName); // object
 console.log(newName.__proto__); // to check the prototype of the string 
 
 // newName has many default funtions with it
