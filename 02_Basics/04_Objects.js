@@ -90,3 +90,14 @@ console.log(rank);
 // but wo this it would have been
 console.log(College.loc);
 console.log(College.rank);
+
+
+// Talks mostly about API
+
+// API : Waiter is just like API, getting the food from the kitched
+// the DOCS are the API Documentation
+
+// API : 2 Forms
+// 1. Object Format --> Have same format but not the object name.
+// 2. XML Format
+
