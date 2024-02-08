@@ -58,7 +58,7 @@ const user = [
 console.log(user[0].id);
 
 
-// Ways to find out all the Keys and Values of the objec
+// Ways to find out all the Keys and Values of the objects
 
 // keys --> we get the output in array format which is very helpful.
 console.log(Object.keys(tinderUser));

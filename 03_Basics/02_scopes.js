@@ -46,7 +46,7 @@ function addOne(num) {
 console.log(addOne(5));
 
 
-// 2nd way of ddeclaration is
+// 2nd way of declaration is
 
 
 const addTwo = function (num) {

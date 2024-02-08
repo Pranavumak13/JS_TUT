@@ -46,13 +46,33 @@ console.log(calculateCartPrice(100, 2, 43, 56, 34));
 
 // Problem : Passing object as a parameter
 
-const myObj = {
-    id: 1,
-    name: "Doreamon",
-}
-
 function passObjAsPara(anyObject) {
     console.log(`ID ${anyObject.id} has name as ${anyObject.name}`);
 }
 
+//1
+const myObj = {
+    id: 1,
+    name: "Doreamon",
+}
 passObjAsPara(myObj);
+
+
+// 2
+// direct passing as a parameter
+passObjAsPara({
+    id:1,
+    name:"Harry Potter and the Secreats of Azkaban"
+})
+
+
+//3
+//Passing Array as a Parameter.
+function passArrayAsPara(anyArray){
+    for(let i in anyArray){
+        console.log(anyArray[i]);
+    }
+}
+
+const myArray = [19,29,39,49]
+passArrayAsPara(myArray);
