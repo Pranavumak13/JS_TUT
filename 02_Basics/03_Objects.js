@@ -42,7 +42,7 @@ const symObj = {
 
 
 // -------- Freeze the object
-// Object.freeze(JSuser);
+// Object.freeze(JSuser); // object properties will not be alter once this is done!
 // JSuser.name = "Harry Potter"
 // console.log(JSuser);
 

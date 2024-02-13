@@ -64,7 +64,8 @@ function func1(num) {
     return num + 1;
 }
 
-console.log(func2(5));
+console.log(func2(5)); // doesnot allow before intiialization
+// const hoisting
 const func2 = function (num) {
     return num + 2;
 }

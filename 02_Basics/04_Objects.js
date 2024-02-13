@@ -64,7 +64,7 @@ console.log(user[0].id);
 console.log(Object.keys(tinderUser));
 // Values
 console.log(Object.values(tinderUser));
-// key-value pait
+// key-value pair
 console.log(Object.entries(tinderUser));
 
 
@@ -94,8 +94,8 @@ console.log(College.rank);
 
 // Talks mostly about API
 
-// API : Waiter is just like API, getting the food from the kitched
-// the DOCS are the API Documentation
+// API : Waiter is just like API, getting the food from the kitchen,
+// the Menu Cards are the API Documentation
 
 // API : 2 Forms
 // 1. Object Format --> Have same format but not the object name.

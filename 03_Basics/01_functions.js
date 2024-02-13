@@ -35,7 +35,7 @@ function calculateCartPrice(...num1) {
 
 
 console.log(calculateCartPrice(100, 2, 43, 56, 34));
-// num1 return the array holdeing all the values that
+// num1 return the array holding all the values that has been passed.
 
 function calculateCartPrice(val1, val2, ...num1) {
     return num1;
