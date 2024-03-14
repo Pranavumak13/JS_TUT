@@ -22,7 +22,7 @@ const JSuser = {
 // console.log(JSuser.full_name); // can't access the key with the space in it.
 
 // 2 using sqaure bracket and quotes
-// console.log(JSuser["full name"]); // can access the key with the space in it.
+console.log(JSuser["full name"]); // can access the key with the space in it.
 
 
 

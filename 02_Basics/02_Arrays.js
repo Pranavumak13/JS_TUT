@@ -40,4 +40,4 @@ console.log(Array.from('Pranav')); //[ 'P', 'r', 'a', 'n', 'a', 'v' ]
 console.log(Array.isArray('Pranav')); //false
 
 //intersting
-console.log(Array.from({ name: "Pranav" })); //  it will return empty array, need to clarify what to convert into the array.
+console.log(Array.from({ name: "Pranav" })); //  it will return empty array, need to clarify what to convert into the array ie key or value.

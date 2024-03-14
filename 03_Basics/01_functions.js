@@ -10,8 +10,10 @@ function add(a, b) {
         return "Error"
 }
 
-const sum = add("13", 4);
-// console.log(sum);        
+const sum = add("13", 4); //error
+// console.log(sum);         
+const sum1 = add(13, 4); //17
+// console.log(sum1);         
 
 
 // WAP to notify weather the user have logged in or not logged
@@ -37,10 +39,10 @@ function calculateCartPrice(...num1) {
 console.log(calculateCartPrice(100, 2, 43, 56, 34));
 // num1 return the array holding all the values that has been passed.
 
-function calculateCartPrice(val1, val2, ...num1) {
+function calculateCartPriceExceptFor2Values(val1, val2, ...num1) {
     return num1;
 }
-console.log(calculateCartPrice(100, 2, 43, 56, 34));
+console.log(calculateCartPriceExceptFor2Values(100, 2, 43, 56, 34));
 // here only last three values, cause val1 takes 100 and val2 - 2;
 
 
@@ -61,7 +63,7 @@ passObjAsPara(myObj);
 // 2
 // direct passing as a parameter
 passObjAsPara({
-    id:1,
+    id:2,
     name:"Harry Potter and the Secreats of Azkaban"
 })
 
@@ -74,5 +76,11 @@ function passArrayAsPara(anyArray){
     }
 }
 
+// by passing arry as arg
 const myArray = [19,29,39,49]
 passArrayAsPara(myArray);
+
+// directly
+passArrayAsPara([
+    1,2,3,4
+])

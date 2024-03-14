@@ -87,7 +87,7 @@ const { loc, rank } = College;
 console.log(loc);
 console.log(rank);
 
-// but wo this it would have been
+// but w/o this it would have been
 console.log(College.loc);
 console.log(College.rank);
 

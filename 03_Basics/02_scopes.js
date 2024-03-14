@@ -34,7 +34,7 @@ if (true) {
     // console.log(website); // 1st error cant access website
 }
 
-// console.log(username); // 2nd error, cant access the username 
+// console.log(username); // 2nd error, cant access the username | as const is block scope
 
 
 // ---------- intersting --------------------------------------------------------
