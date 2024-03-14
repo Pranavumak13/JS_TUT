@@ -9,18 +9,20 @@ console.log(newArray);
 
 // Array Methods
 
-// console.log(arry.length);
-// console.log(Array.isArray(newArray));
+// console.log(arry.length);  // 5
+console.log(Array.isArray(newArray)); 
 // console.log(newArray.push(90));
 // console.log(newArray.pop());
 
-// console.log(newArray.unshift(999)); //shift the arg to first index
+console.log(newArray.unshift(3443)); // add the arg's value at the 0th position
 // console.log(newArray.shift()); // remove the first index
+// console.log(newArray); 
 // .includes(x)
 // .indexOf(a)
 
 const joinedArry = newArray.join(); // converts into the string.
 // console.log(joinedArry);
+// console.log(typeof joinedArry);
 
 
 // slice and splice --> major diff is that slice does not change the original array but splice does
