@@ -47,8 +47,7 @@ console.log(addOne(5));
 
 
 // 2nd way of declaration is
-
-
+// also called as expressions
 const addTwo = function (num) {
     return num + 2;
 }
