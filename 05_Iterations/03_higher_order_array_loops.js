@@ -1,12 +1,12 @@
-// -----------------------------for of
+// -----------------------------for of | for in | Maps | forEach
 
 // plane array ["","",""]
 // array of objects [{},{},{}]
-// No decrement or Increment is required
+// No decrement or Increment is required in for..of loop
 
 // array --> ok
 const arry = [1,2,3,4,5]
- 
+
 for (const i of arry) {
     // console.log(i);
 }
@@ -63,14 +63,18 @@ for (const key in myObject) {
 }
 
 // lets try out the forin loop for arrays
-// keys> indexes of arrays
-// Values > value at the indec
+// keys > indexes of arrays
+// Values > value at the index
 const arr = [76,20,96,55,67]
 
 for (const i in arr) {
     console.log(arr[i]);
 }
 
+const string = "Spiderman"
+for (const i in string) {
+    console.log(string[i]);
+}
 
 //------------ forEach
 
@@ -119,6 +123,48 @@ codingLang.forEach(element => {
     console.log(element.progLangExt);  
 });
 
+// doesnot work on string
+// str = "Hello I am Pranav"
+
+// str.forEach(element => {
+//   console.log(element);  
+// });
+
+
+// // nor does on Objects
+// obj = {
+//     name:"Pranav",
+//     position:"Intern"
+// }
+
+// obj.forEach(element => {
+//     console.log(element);
+// });
+
+
+
+
+// forEach does it store valuees?
+
+ const coding = ["JS", "CPP", "C" ]
+
+ const itemsOFCoding = coding.forEach((item)=>{
+    console.log(item);
+})
+
+console.log(itemsOFCoding); // does not return the values
+ 
+// answer is NO it doesnt return thr values
+
+
+
+
+
+
+
+
+
+
 
 /*
 forof
@@ -135,4 +181,12 @@ strings
 objects
 
 not --> maps
+
+
+forEach
+only on ARRAYS
+
+not
+objects
+strings
 */
