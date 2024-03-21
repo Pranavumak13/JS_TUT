@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        };
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">Hello </h1>
+        
+        <h2>Lorem ipsum dolor sit amet.</h2>
+
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit1.</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit2.</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit3.</h3>
+
+        <input type="button" value="Btn">
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi pariatur facilis incidunt iusto ratione delectus corrupti ab ut nesciunt molestiae. Nisi, quos cupiditate beatae accusantium nihil aliquam placeat molestiae sit magnam voluptates tenetur, accusamus corporis? Molestiae a accusantium nemo laudantium quisquam repellat. Voluptatum maxime nihil delectus deserunt quisquam mollitia, totam harum unde dolorum doloribus, doloremque rem officia cum iure odit! Libero quod ratione necessitatibus quae adipisci reiciendis eum harum illum placeat magnam aliquam dolor sapiente, delectus nulla sed consequuntur exercitationem!</p>
+    </div>
+</body>
+</html>
+
+<!-- 
+    1. DOM : Document Object Model
+
+    it is actually a structure of a HTML Page
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+    <body>
+        <div class="bg-black">
+            <h1></h1>
+        </div>
+    </body>
+    </html>
+
+
+    2. It is usaully represented in a TREE format.
+    3. In Browser we have window, which contains a lot of things
+        console.log(window)
+        console.log(window.document)
+        
+        console.log(document)
+        console.dir(document)
+
+    4.
+    getElementById
+    getElementByClassName
+    getAttribute('..') 
+    setAttribute('..','..') // it will always overwrite the previous value so you have to write the new and prev value too
+
+
+    5. You can also store it inside of a variable
+
+    6. you can apply all the style properties too
+        for eg: title.style.backgroundcolor = 'green' where title is an element
+
+    7. TO get the content from the ELELMENT: innertext, innerHTML, innerContent
+
+    8. Difference between innertext, innerContent, innerHTML
+        innerText: contains only visible text inside selected element
+
+        innerContent(textContent<): constains both visible and hidden elements inside selected element
+
+        innerHTML: entire HTML With tags and attributes
+
+    9. HTMLCollection?
+
+    10. DOM selecting an element
+        To get a DOM element using JavaScript, you can use various methods provided by the Document Object Model (DOM) API. Here are some common ways to select and retrieve DOM elements:
+
+    getElementById():
+
+        This method allows you to select an element by its unique id attribute.
+
+        const elementById = document.getElementById(“elementId”);
+
+    getElementsByClassName():
+
+        This method retrieves elements by their class name.
+
+        const elementsByClass = document.getElementsByClassName(“className”);
+
+    getElementsByTagName():
+
+        Use getElementsByTagName() to select elements by their tag name;
+
+        const elementsByTag = document.getElementsByTagName("h3");;
+
+    querySelector():
+
+        The querySelector() method lets you select an element using a CSS selector.
+
+        const element = document.querySelector(“.className”); // Selects by class
+
+        const anotherElement = document.querySelector(“#elementId”); // Selects by id
+
+    querySelectorAll():
+
+        Use querySelectorAll() to select multiple elements that match a CSS selector.
+
+        const elements = document.querySelectorAll("h3");
+
+    *****querySelectorAll() and getElementByClassName() acts like array nit NOT an ARRAY its called as NODELIST
+
+    11. TO convert HTMLCollections into Array we can use "Array.from(nameOFVariable)" | keep in mind that "A" must be capital of an array
