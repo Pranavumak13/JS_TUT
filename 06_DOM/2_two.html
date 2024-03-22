@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Traversing the Elements</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const prt = document.querySelector('.parent')
+    console.log(prt);
+    console.log(prt.children);
+    console.log(prt.children[2].innerHTML);
+    prt.children[2].style.color = "green"
+    
+    // converting HTMLCollection into the Array
+    const parArr = Array.from(prt.children)
+    console.log(parArr);
+    parArr.forEach((day)=>console.log(day.innerHTML))
+
+    // first and last child, selecting child from parent
+    console.log(prt.firstElementChild);
+    console.log(prt.lastElementChild);
+
+
+    // selecting parent from the child
+    // lets our child is cld
+    const cld = document.querySelector(".day")
+    console.log(cld.parentElement);
+    console.log(cld.nextElementSibling);
+    console.log(cld.parentNode);
+
+    // Regarding the CHILDNODES ---- Intersting and IMP
+    console.log(prt.childNodes );
+    // childnodes  list contains 
+    //     a. all the childs (in this case: 4)
+    //     b. "enter" key after every line (5) (it will not count the empty space after 1 entry line)
+    // therefore total 9 childnodes
+
+</script>
+</html>
+
+
+<!--  Notes
+    Topic: Traversing through the DOM Tree.
+     
+    1. Selecting proper children of a parent
+        .children property
+       To extract out the data from the childrens
+        .innerHTML
+
+    2. firstElementChild and lastElementChild
+
+    3. selecting a parent, sibling from the child
+            .parentElement
+            .nextElementSibling
+
+    4. querySelector() is an expensive operation as its a tree structure.
+    
+    5. Children Nodelist
+
+ -->
