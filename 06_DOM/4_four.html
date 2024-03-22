@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit or Remove Element</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="langauge">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addNewListItem(lang){
+        // selecting the parent
+        const parent = document.querySelector(".langauge")
+
+        // creating and adding new list item
+        const listItem = document.createElement("li")  
+        listItem.innerText =  `${lang}`
+
+        //attaching child to the parent
+        parent.appendChild(listItem)
+    }
+
+    addNewListItem("Rust")
+    addNewListItem("TypeScript")
+
+    // the above approach used is slightly inefficient.
+    // the reason behind that is, to add every new listItem we have to traverse entire tree and add it at the end.
+
+    // Optimized Approach
+    // hint: appendChild( => createTextNode() instrad of innerText)
+    function optimizedListAddingFun(lang){
+        const listItem = document.createElement('li')
+        listItem.appendChild(document.createTextNode(`${lang}`))
+
+        document.querySelector('.langauge').appendChild(listItem)
+    }
+
+    optimizedListAddingFun("C++")
+
+    // Edit the Element
+    // select parent
+    const secListItem = document.querySelector('li:nth-child(2)')
+
+    // create li
+    const newListItem = document.createElement("li")
+    newListItem.textContent = "SQL" // also not efficient comapre to innerHTML
+
+    // attach to parent
+    // secListItem.appendChild(newListItem) // mind here, this will add new element
+    // but we want to edit the existingg element
+    secListItem.replaceWith(newListItem)
+
+    //edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = "<li>Java</li>"
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
