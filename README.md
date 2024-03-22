@@ -1,2 +1,2 @@
 # JS_TUT
-This is the repository created for while practicing the JS tutorials.
+This is the repository created while practicing the JS tutorials.
