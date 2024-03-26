@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Programming</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>Happy Coding</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    setTimeout(()=>{
+        console.log("I am Pranav");
+    }, 1000)
+
+    // changing h1
+    function changeH1(){
+        document.querySelector('h1').innerHTML = "<h3>OOPs, Happy JS Coding</h3>"
+    }
+
+    const changeMe = setTimeout(changeH1,2000)
+    
+    document.querySelector('button').addEventListener('click',()=>{
+        clearTimeout(changeMe)
+        console.log('stop');
+    })
+
+    // the h1 should not change when the button is clicked
+
+
+    // setInterval(()=>{
+    //     console.log("Interval it is");
+    // }, 5000)
+</script>
+</html>
+
+
+<!-- Notes 
+
+1. setTimeout()  -> A method which calls out to APIs
+handler -- a function with no name (temp)
+-- this method does the required task once, after the specified period hits
+
+
+2. clearTimeout() -: clears the setTimeouts
+
+
+2. setInterval()  -- this method does the required task everytime, after the specified period hits
+-->

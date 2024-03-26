@@ -166,3 +166,56 @@ function newGame() {
   });
 }
 ```
+
+## 5. Keyboard
+```javascript
+const insert = document.querySelector('#insert');
+
+const keyPress = window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class = 'color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? "Space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  </table>
+  </div>
+  `;
+});
+
+
+```
+
+## 6. BG Color Changer
+
+```javascript
+let startInterval;
+
+function randomColor() {
+  const x = Math.floor(Math.random() * 256);
+  const y = Math.floor(Math.random() * 256);
+  const z = Math.floor(Math.random() * 256);
+  const bgColor = `rgb(${x},${y},${z})`;
+  console.log(bgColor);
+  document.querySelector('body').style.backgroundColor = bgColor;
+}
+
+document.querySelector('#start').addEventListener('click', () => {
+  if (!startInterval) {
+    startInterval = setInterval(randomColor, 1000);
+  }
+});
+
+document.querySelector('#stop').addEventListener('click', () => {
+  clearInterval(startInterval);
+  startInterval = null;
+});
+
+```
