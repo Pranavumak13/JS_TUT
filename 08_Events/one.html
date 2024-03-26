@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li> <!-- onclick="alert('Owl')" -->
+ 
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //2. this method also causes the problem.: Propagation Problem.
+    // document.getElementById('owl').onclick=function(){
+    //     alert("Owl Clicked"); }
+    // other approaches
+    // 4. attachEvent() --> during the Internet Exploler time this was used.
+    // 5. jQuery --> .on() this is used to do the task of addEventListeners.
+
+    // 3
+    // document.getElementById('owl').addEventListener("click",()=>{
+    //     alert("Hey I am owl")
+    // })
+
+
+    // events in addEventLister's Function
+
+    const owlEle = document.getElementById('owl')
+    // owlEle.addEventListener("click", function(e){
+    //     console.log(e);
+    // })
+
+    // things to learn from e's object
+    // type, timeStamp, defaultPrevented, target, toElement, srcElement, currentTarget
+    // Interview Specific: clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode.
+    // IMP::: srcElement
+
+    // EventListener on "ul"
+    document.getElementById('images').addEventListener("click",function(e){
+         console.log("Hey I am ul tag")
+    },false)
+
+    // EvenetListerner on "li"
+    owlEle.addEventListener("click",function(e){
+        console.log("The OWL")
+        // e.stopPropagation() // prevents the default behaviour of going upwards.
+    },false)
+
+    document.getElementById('google').addEventListener("click",(e)=>{
+        console.log("Google Clicked");
+        e.preventDefault() // will stop the default behaviour, will not direct to google.com
+        
+        // e.stopPropagation() // stop the propagation
+    }, false)
+
+
+
+    // Task: When clicked on images, it should disappear.
+    document.getElementById('images').addEventListener("click",(e)=>{
+        // console.log(e.target.parentNode);
+
+        if(e.target.tagName === 'IMG'){ // TAGNAME 
+
+            const removeIt = e.target.parentNode // gives li ele
+            // 2 ways to remove it
+            // removeIt.remove()
+            // or
+            removeIt.parentNode.removeChild(removeIt)
+            //  li : ul : img
+        }
+    })
+
+</script>
+</html>
+
+<!-- 
+    Notes:
+    1. Events run in a SEQUENTIAL Manner only.,
+    exceptions: Asynchronus Programming; Browsers's Event: click, keyboard press
+
+    2. onclick is not good in HTML as it causes problem on scalabitlity althought it has different implementation in React.
+
+    3. onclick is also not good in js , as it causes PROPAGATION problem, meaning it has less fetures than the EVENTLIsterns
+
+    4. Event Propagation Context:
+        i) Event Bubbling (Default) : set "false" | Bottom to Top, as bubble goes upward when filled. | the activity at the bottom will execute first.
+        ii) Event Capturing  : set "true" | Top to Bottom., the activity at the top will execute first.
+ -->
