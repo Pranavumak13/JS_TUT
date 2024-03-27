@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XHR</title>
+    
+</head>
+<body style = "background-color: #212121; color:#fff">
+    <div class="main">
+        
+    </div>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/Pranavumak13"
+
+    const xhr = new XMLHttpRequest() // creating an object xhr from a class
+
+    xhr.open('GET', requestUrl)  // an open method is called
+
+    // to track the status of request use below
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            // the response text is in string, we need to convert it into objects : JSON.parse() makes u do that.
+
+            console.log(typeof data) 
+            console.log(data.followers);
+            console.log(data);
+            
+            document.querySelector(".main").innerHTML = `
+            <div>
+                <h1>${data.name}</h1>
+                <img src=${data.avatar_url} alt="Image" width="200px">
+                <p>${data.followers}</p>
+            </div>`
+        }
+    }
+
+    xhr.send()
+
+</script>
+</html>
+
+
+<!-- 
+    #Notes:
+
+    #API ?
+    github api: https://api.github.com/users/Pranavumak13
+    randomUser Genrator: https://randomuser.me/api/
+
+    #TO Understand API structure: https://jsonformatter.org/ 
+
+    #AJAX Request: Asynchronous Javascript and XML
+    #XMLHttpRequest (XHR) 
+
+    #XML Request: ReadyState
+    Value	State	Description
+    0	    UNSENT	Client has been created. open() not called yet.
+    1	    OPENED	open() has been called.
+    2	    HEADERS_RECEIVED	send() has been called, and headers and status  are available.
+    3	    LOADING	Downloading; responseText holds partial data.
+    4	    DONE	The operation is complete.
+
+ -->
